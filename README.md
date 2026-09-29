@@ -64,13 +64,13 @@ A  web application built with **React**, **Material-UI (MUI)**, **Axios**, and *
 
 
 
-## 📡 TMDb API Usage
+## TMDb API Usage
 
 The application connects to **The Movie Database (TMDb) API v3** via [`src/api/tmdb.js`](src/api/tmdb.js).
 
 
 
-## 🚀 Project Setup & Installation
+## Project Setup & Installation
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (version 18.0.0 or higher recommended)
