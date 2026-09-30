@@ -39,7 +39,7 @@ const LoginPage = () => {
     setValidationError('');
 
     if (!username.trim()) {
-      setValidationError('Please enter a username or email address.');
+      setValidationError('Please enter your username.');
       return;
     }
     if (!password) {
@@ -141,7 +141,7 @@ const LoginPage = () => {
                   required
                   fullWidth
                   id="username"
-                  label="Username or Email"
+                  label="Username"
                   name="username"
                   autoComplete="username"
                   autoFocus

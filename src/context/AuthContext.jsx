@@ -10,10 +10,9 @@ export const AuthProvider = ({ children }) => {
       const savedUser = localStorage.getItem('movie_explorer_user');
       if (!savedUser) return null;
       const parsed = JSON.parse(savedUser);
-      // Clean up any legacy @loonslab.com emails
-      if (parsed?.email && parsed.email.endsWith('@loonslab.com')) {
-        parsed.email = '';
-        localStorage.setItem('movie_explorer_user', JSON.stringify(parsed));
+      if (parsed) {
+        delete parsed.name;
+        delete parsed.email;
       }
       return parsed;
     } catch {
@@ -32,7 +31,7 @@ export const AuthProvider = ({ children }) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (!username || !username.trim()) {
-          const err = 'Username or email is required';
+          const err = 'Username is required';
           setError(err);
           setLoading(false);
           reject(new Error(err));
@@ -47,13 +46,8 @@ export const AuthProvider = ({ children }) => {
         }
 
         const cleanUsername = username.trim();
-        const isEmail = cleanUsername.includes('@');
         const userData = {
           username: cleanUsername,
-          name: isEmail
-            ? cleanUsername.split('@')[0]
-            : cleanUsername.charAt(0).toUpperCase() + cleanUsername.slice(1),
-          email: isEmail ? cleanUsername : '',
           avatar: `https://api.dicebear.com/7.x/bottts/svg?seed=${cleanUsername}`,
           token: 'mock-jwt-token-' + Date.now(),
           loginTime: new Date().toISOString(),

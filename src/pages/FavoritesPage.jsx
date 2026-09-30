@@ -118,9 +118,6 @@ const FavoritesPage = () => {
             <Typography variant="h4" component="h1" fontWeight={800}>
               My Favorite Movies
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Saved for your personal watchlist
-            </Typography>
           </Box>
           <Chip
             label={`${favoritesCount} saved`}

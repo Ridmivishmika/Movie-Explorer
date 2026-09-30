@@ -264,11 +264,11 @@ const Navbar = () => {
             {/* Auth Profile or Login Button */}
             {isAuthenticated ? (
               <Box>
-                <Tooltip title={`Signed in as ${user.name || user.username}`}>
+                <Tooltip title={`Signed in as ${user.username}`}>
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0.5 }}>
                     <Avatar
                       src={user.avatar}
-                      alt={user.name || user.username}
+                      alt={user.username}
                       sx={{
                         width: 38,
                         height: 38,
@@ -277,7 +277,7 @@ const Navbar = () => {
                         bgcolor: 'primary.light',
                       }}
                     >
-                      {(user.name || user.username || 'U').charAt(0).toUpperCase()}
+                      {(user.username || 'U').charAt(0).toUpperCase()}
                     </Avatar>
                   </IconButton>
                 </Tooltip>
@@ -298,10 +298,7 @@ const Navbar = () => {
                 >
                   <Box sx={{ px: 2, py: 1.5 }}>
                     <Typography variant="subtitle2" sx={{ fontWeight: 700 }}>
-                      {user.name || user.username}
-                    </Typography>
-                    <Typography variant="caption" color="text.secondary">
-                      {user.email || `@${user.username}`}
+                      {user.username}
                     </Typography>
                   </Box>
                   <Divider />
@@ -379,10 +376,7 @@ const Navbar = () => {
             <Avatar src={user.avatar} sx={{ width: 40, height: 40 }} />
             <Box sx={{ overflow: 'hidden' }}>
               <Typography variant="subtitle2" noWrap fontWeight={700}>
-                {user.name || user.username}
-              </Typography>
-              <Typography variant="caption" color="text.secondary" noWrap display="block">
-                {user.email || `@${user.username}`}
+                {user.username}
               </Typography>
             </Box>
           </Box>
