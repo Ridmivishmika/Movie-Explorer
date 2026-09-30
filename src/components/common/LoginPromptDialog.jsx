@@ -113,7 +113,7 @@ const LoginPromptDialog = ({ open, onClose }) => {
                 Please login to add <strong>"{pendingMovie.title}"</strong> to your favorites.
               </>
             ) : (
-              'Please login to save movies to your personal favorites list.'
+              'Please login to save movies to your favorites list.'
             )}
           </Typography>
         </DialogContent>

@@ -110,7 +110,6 @@ const SearchBar = () => {
         </IconButton>
       </Paper>
 
-      {/* Last Searched Movie persistence indicator (Assignment Requirement) */}
       {lastSearchedMovie && (
         <Box
           sx={{
