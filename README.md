@@ -1,4 +1,4 @@
-# 🎬 Movie Explorer
+# Movie Explorer
 
 A  web application built with **React**, **Material-UI (MUI)**, **Axios**, and **The Movie Database (TMDb) API**. 
 
@@ -10,7 +10,8 @@ A  web application built with **React**, **Material-UI (MUI)**, **Axios**, and *
 - **Sign In System:** Clean login page supporting any username and password (4+ characters).
 - **Per-User Session Persistence:** User session and profile state stored securely in `localStorage`.
 - **Conditional Navigation:** 
-  - The **Explore** button appears only after user login.
+  - The **Explore** button appears only after user login
+  .
   - Favorites and user profile options are protected for authenticated users.
 - **Auto-Generated Avatars:** Dynamic avatar generation for each user based on their username.
 
